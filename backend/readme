@@ -1,7 +1,16 @@
-plan
+plan:
 
+
+-- routes
 > login call
 > > check credentials
-> > > get jwt
+> > > get JWT
 > > > redirect to page with token
+> rest of page calls
+> > check JWT
+
+-- models
+JWT Generator
+DB Authenticator
+JWT Authenticator
 
