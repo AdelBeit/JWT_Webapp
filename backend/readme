@@ -1,0 +1,7 @@
+plan
+
+> login call
+> > check credentials
+> > > get jwt
+> > > redirect to page with token
+
