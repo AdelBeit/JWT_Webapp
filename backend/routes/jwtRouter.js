@@ -1,9 +1,13 @@
-var express = require("express");
-var router = express.Router();
+const express = require("express");
+const router = express.Router();
+const updateToken = require("../model/mongo").updateToken;
+const generateToken = require("../model/JWT").generateToken;
 
-/* GET users listing. */
-router.get("/", function (req, res, next) {
-  res.send("respond with a resource");
+router.post("/getToken", (req, res) => {
+  const username = req.body.username;
+  const token = generateToken(username);
+  updateToken(username, token);
+  res.redirect("/home");
 });
 
 module.exports = router;

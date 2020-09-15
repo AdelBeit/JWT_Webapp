@@ -8,9 +8,12 @@ plan:
 > > > redirect to page with token
 > rest of page calls
 > > check JWT
+> logout call
 
 -- models
-JWT Generator
-DB Authenticator
-JWT Authenticator
-
+mongo
+> authenticate user and password
+> authenticate user and token
+> > save token with user
+JWT
+> generate token
